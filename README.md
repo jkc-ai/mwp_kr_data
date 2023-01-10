@@ -52,7 +52,7 @@ AI Grand Challenge 5차 대회에 활용한 한국어 서술형 수학문제 데
         "class": "문제 유형" (타입: 문자열),
         "question": "문제" (타입: 문자열),
         "answer" : "답" (타입: 문자열),
-	"equation" : "none" (타입: 문자열)
+	    "equation" : "none" (타입: 문자열)
     },
 
 }
