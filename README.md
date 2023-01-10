@@ -106,7 +106,7 @@ AI Grand Challenge 5차 대회에 활용한 한국어 서술형 수학문제 데
         "question": "8*4A=336일때, A를 구하시오.",
         "answer": "2",
         "equation": "A"
-    },
+    }
     ```
 
 
