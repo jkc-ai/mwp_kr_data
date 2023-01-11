@@ -135,7 +135,10 @@ AI Grand Challenge 5차 대회에 활용한 한국어 서술형 수학문제 데
         "class": "수찾기3",
         "question": "어떤 수에 3.4를 곱해야 할 것을 잘못하여 더했더니 15.2가 되었습니다. 바르게 계산한 값에 8을 곱하면 얼마인지 구하시오.",
         "answer": "320.96",
-        "equation": "(15.2-3.4)*3.4*8"
+        "equation": "(15.2-3.4)*3.4*8",
+        "option": "none",
+        "option_value": "none",
+        "unknown": "none"
     }
     ```
 
