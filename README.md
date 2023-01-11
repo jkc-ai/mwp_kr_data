@@ -146,6 +146,8 @@ AI Grand Challenge 5차 대회에 활용한 한국어 서술형 수학문제 데
     ```
 
     - 크기비교
+    option: 정답 후보들에 해당
+    option_value: 후보별 대입할 값
     ```
     {
         "class": "크기비교",
