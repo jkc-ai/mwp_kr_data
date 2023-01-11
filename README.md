@@ -161,7 +161,10 @@ AI Grand Challenge 5차 대회에 활용한 한국어 서술형 수학문제 데
         "class": "도형",
         "question": "삼각형의 밑변이 7cm, 넓이가 21cm2일 때 높이는 몇 cm인지 구하세요.",
         "answer": "6",
-        "equation": "21*2/7"
+        "equation": "21*2/7",
+        "option": "none",
+        "option_value": "none",
+        "unknown": "none"
     }
     ```
 
