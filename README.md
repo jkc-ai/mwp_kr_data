@@ -70,7 +70,10 @@ AI Grand Challenge 5차 대회에 활용한 한국어 서술형 수학문제 데
         "class": "순서정하기1",
         "question": "아이스크림을 기다리는 줄에서 원준이는 앞에서 여섯째, 뒤에서 셋째에 서있다고 합니다. 아이스크림을 기다리는 사람은 전부 몇 명일까요?",
         "answer": "8",
-        "equation": "6+3-1"
+        "equation": "6+3-1",
+        "option": "none",
+        "option_value": "none",
+        "unknown": "none"
     },
     ```
 
