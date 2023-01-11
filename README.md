@@ -83,7 +83,7 @@ AI Grand Challenge 5차 대회에 활용한 한국어 서술형 수학문제 데
     ```
 
     - 순서정하기2
-        - option : 정답 후보들에 해당. equation에서 X에 해당.
+        - option : 정답 후보들에 해당하거나 equation에서 X에 해당하는 값
     ```
     {
         "class": "순서정하기2",
