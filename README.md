@@ -57,7 +57,10 @@ AI Grand Challenge 5차 대회에 활용한 한국어 서술형 수학문제 데
         "class": "산술연산",
         "question": "수연이는 하루에 25쪽 씩 3일 동안 모두 읽은 동화책을 다시 읽으려고 합니다. 동화책의 전체 쪽수는 몇 쪽일까요?",
         "answer": "75",
-        "equation": "25*3"
+        "equation": "25*3",
+        "option": "none",
+        "option_value": "none",
+        "unknown": "none"
     }
     ```
 
