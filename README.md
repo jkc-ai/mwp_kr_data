@@ -34,27 +34,19 @@ AI Grand Challenge 5차 대회에 활용한 한국어 서술형 수학문제 데
 
 데이터는 JSON으로 작성하였으며, 데이터 구조 및 각 유형별 예시는 다음과 같습니다.
 
-- 데이터 구조(TODO)
+- 데이터 구조
 ```
 {
     문제 번호 (타입: 문자열): {
         "class": "문제 유형" (타입: 문자열),
         "question": "문제" (타입: 문자열),
         "answer" : "답" (타입: 문자열),
-        "equation": "수식" (타입: 문자열)
+        "equation": "수식" (타입: 문자열),
+        "option": "보기" (타입: 문자열),
+        "option_value": "보기 값을 구하는 수식" (타입:문자열),
+        "unknown": "미지수 값을 구하는 수식/정보" (타입: 문자열)
     },
-    
-    .
-    .
-    .
-
-    문제 번호 (타입: 문자열): {
-        "class": "문제 유형" (타입: 문자열),
-        "question": "문제" (타입: 문자열),
-        "answer" : "답" (타입: 문자열),
-	    "equation" : "none" (타입: 문자열)
-    },
-
+    ...
 }
 ```
 - 유형별 예시
@@ -65,18 +57,38 @@ AI Grand Challenge 5차 대회에 활용한 한국어 서술형 수학문제 데
         "class": "산술연산",
         "question": "수연이는 하루에 25쪽 씩 3일 동안 모두 읽은 동화책을 다시 읽으려고 합니다. 동화책의 전체 쪽수는 몇 쪽일까요?",
         "answer": "75",
-        "equation": "25*3"
+        "equation": "25*3",
+        "option": "none",
+        "option_value": "none",
+        "unknown": "none"
     }
     ```
 
-    - 순서정하기
+    - 순서정하기1
     ```
     {
         "class": "순서정하기1",
         "question": "아이스크림을 기다리는 줄에서 원준이는 앞에서 여섯째, 뒤에서 셋째에 서있다고 합니다. 아이스크림을 기다리는 사람은 전부 몇 명일까요?",
         "answer": "8",
-        "equation": "6+3-1"
+        "equation": "6+3-1",
+        "option": "none",
+        "option_value": "none",
+        "unknown": "none"
     },
+    ```
+
+    - 순서정하기2
+        - option : 정답 후보들에 해당. equation에서 X에 해당.
+    ```
+    {
+        "class": "순서정하기2",
+        "question": "다람쥐가 도토리 주머니를 도토리가 적게 담긴 순서대로 땅속에 넣어두려 합니다. 도토리 주머니에는 도토리가 각각 10, 20, 50, 40, 30개 들어있습니다. 땅속에 두 번째로 넣어야 하는 도토리 주머니에는 도토리가 몇 개 들어있을까요?",
+        "answer": "20",
+        "equation": "find_min(sort(X),2)",
+        "option": "10, 20, 50, 40, 30",
+        "option_value": "none",
+        "unknown": "none"
+    }
     ```
 
     - 조합하기
@@ -85,27 +97,38 @@ AI Grand Challenge 5차 대회에 활용한 한국어 서술형 수학문제 데
         "class": "조합하기",
         "question": "지혜는 주사위 3개를 던져서 윗면에 나온 세 눈의 수를 모두 사용하여 분수를 만들려고 합니다. 만들 수 있는 가장 작은 대분수를 구하세요.",
         "answer": "(7/6)",
-        "equation": "none"
+        "equation": "min(A)",
+        "option": "none",
+        "option_value": "none",
+        "unknown": "none"
     }
     ```
 
     - 수찾기1
+        - unknown : 미지수를 구하기 위한 정보 (리스트)
     ```
     {
         "class": "수찾기1",
-        "question": "두 초콜릿 A와 B가 있습니다. A의 무게는 54g이며 가격은 810원이고, B의 무게는 75g이며 가격은 900원입니다. 이안이는 편의점에서 두 초콜릿 중 1g당 가격이 더 싼 초콜릿을 45개 사려고 합니다. 이안이가 초콜릿을 사고 내야 할 돈은 모두 얼마인지 구하세요.",
-        "answer": "40500",
-        "equation": "900*45"
+        "question": "영석이네 모둠 학생들이 한 뼘의 길이를 조사했더니, 영석이는 15.5cm, 은수는 13.7cm, 민정이는 14.3cm, 동규는 14.9cm이 나왔습니다. 영석이네 모둠 학생들의 한 뼘의 길이의 평균은 몇 cm인지 구하세요.",
+        "answer": "14.6",
+        "equation": "sum(X)/4",
+        "option": "none",
+        "option_value": "none",
+        "unknown": "X=[15.5, 13.7, 14.3, 14.9]"
     }
     ```
 
     - 수찾기2
+        - unknown : 미지수를 구하기 위한 수식
     ```
     {
         "class": "수찾기2",
         "question": "8*4A=336일때, A를 구하시오.",
         "answer": "2",
-        "equation": "A"
+        "equation": "A",
+        "option": "none",
+        "option_value": "none",
+        "unknown": "8*4A=336"
     }
     ```
 
@@ -115,17 +138,25 @@ AI Grand Challenge 5차 대회에 활용한 한국어 서술형 수학문제 데
         "class": "수찾기3",
         "question": "어떤 수에 3.4를 곱해야 할 것을 잘못하여 더했더니 15.2가 되었습니다. 바르게 계산한 값에 8을 곱하면 얼마인지 구하시오.",
         "answer": "320.96",
-        "equation": "(15.2-3.4)*3.4*8"
+        "equation": "(15.2-3.4)*3.4*8",
+        "option": "none",
+        "option_value": "none",
+        "unknown": "none"
     }
     ```
 
     - 크기비교
+    option: 정답 후보들에 해당
+    option_value: 후보별 대입할 값
     ```
     {
         "class": "크기비교",
         "question": "민준이의 책장에는 책이 모두 60권 있습니다. 그중 22권은 위인전이고, 26권은 동화책입니다. 나머지는 모두 시집일 때 민준이의 책장에 가장 많이 꽃혀있는 책은 무엇입니까?",
         "answer": "동화책",
-        "equation": "none"
+        "equation": "max(위인전, 동화책, 시집)",
+        "option": "위인전, 동화책, 시집",
+        "option_value": "위인전=22, 동화책=26, 시집=60-22-26",
+        "unknown": "none"
     }
     ```
 
@@ -135,7 +166,10 @@ AI Grand Challenge 5차 대회에 활용한 한국어 서술형 수학문제 데
         "class": "도형",
         "question": "삼각형의 밑변이 7cm, 넓이가 21cm2일 때 높이는 몇 cm인지 구하세요.",
         "answer": "6",
-        "equation": "21*2/7"
+        "equation": "21*2/7",
+        "option": "none",
+        "option_value": "none",
+        "unknown": "none"
     }
     ```
 
