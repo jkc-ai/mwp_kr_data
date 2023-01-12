@@ -204,7 +204,7 @@ AI Grand Challenge 5차 대회에 활용한 한국어 서술형 수학문제 데
 ## 6. Citation
 ```
 @misc{KMWP
-  author       = { .. },
+  author       = { .., Taeil Hur, ..,  },
   title        = {MWP_KR_DATA, Dataset for Math Word Problems in Korean Language},
   howpublished = {\url{https://github.com/jkc-ai/mwp_kr_data}},
   year         = {2022},
