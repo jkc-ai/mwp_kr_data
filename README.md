@@ -204,8 +204,7 @@ AI Grand Challenge 5차 대회에 활용한 한국어 서술형 수학문제 데
 ## 6. Citation
 ```
 @misc{MWP_KR_DATA
-  author       = { Soyoung Lim, Heecheol Cho, Taeil Hur, Jiyeon Yim, Taeyoung Ko, Tae-Hyun
-Chun, Eunjin Choi, Jiyoung Jeong, Yonggyun Yu, Donghyun Shin, GyeongHwan Jang},
+  author       = { Soyoung Lim, Heecheol Cho, Taeil Hur, Jiyeon Yim, Taeyoung Ko, Tae-Hyun Chun, Eunjin Choi, Jiyoung Jeong, Yonggyun Yu, Donghyun Shin, GyeongHwan Jang, Minjong Kim, Sangwon Lee},
   title        = {MWP_KR_DATA, Dataset for Math Word Problems in Korean Language},
   howpublished = {\url{https://github.com/jkc-ai/mwp_kr_data}},
   year         = {2022},
